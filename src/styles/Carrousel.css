@@ -1,0 +1,18 @@
+#Carrousel{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    font-size:100px;
+    color:#5e1113;
+}
+
+p {
+    font-size:30px;
+    color:#202325;
+}

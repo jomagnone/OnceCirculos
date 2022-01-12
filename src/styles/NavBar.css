@@ -1,0 +1,82 @@
+
+#BarraNavegacion{
+    width: 50%;
+}
+.menuPrincipal {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:#808B9690 ;
+    width: 20%;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    font-weight: bold;
+    text-decoration:none ;
+    z-index: 1;
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+.p1 {
+    left: 0%; }
+  
+.p2 {
+    left: 20%; }
+  
+.p3 {
+    left: 40%; }
+  
+.p4 {
+    left: 60%; }
+  
+.p5 {
+    left: 80%; }
+  
+
+.subMenu{
+    display: none;
+    margin-left: 0px;
+    margin-right: 0%;
+    width:100% ;
+    background-color:#CFD4D890  ;
+    position: relative;
+    cursor:pointer;
+    padding:15px 0px;
+    font-weight: normal;
+    font-size: 13px;
+    text-decoration-line: none;
+    text-transform: uppercase;
+    
+}
+
+.subMenu:hover{
+    font-weight: bolder;
+}
+
+.margen{
+    margin-top: 10px;
+    font-style: normal;
+}
+
+.menuPrincipal:hover .subMenu{
+    display: block;
+}
+nav {
+    grid-area: nav; 
+}
+
+#logo {
+    width: 57px;
+    height: auto;
+    position: block;
+    margin: 0px;
+    z-index: 1;
+}
