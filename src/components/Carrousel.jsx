@@ -11,7 +11,7 @@ function Carrousel() {
     return (
     
 
-      <div id = "Carrousel">
+      <div className = "Carrousel">
     
 
           <Carousel>
@@ -19,38 +19,48 @@ function Carrousel() {
               <img
                 className="d-block w-100"
                 src={Fondo1}
-                alt="First slide"
+                alt=""
               />
               <Carousel.Caption>
+              <div className="carrouselText">
                 <h1>Bebidas</h1>
-                <p>Sake, shochu, yuzusake</p>
-                <p>Fermentación ecosostenible para un sabor real</p>
+                <hr />
+                
+                <p>Fermentación ecosostenible para un sabor real.</p>
+              </div>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
                 src={Fondo4}
-                alt="Second slide"
+                alt=""
               />
 
               <Carousel.Caption>
+                <div className="carrouselText">
+                  
               <h1>Alimentación</h1>
-                <p>Koji, tempeh, natto, arroz eco, Malesa de Arroz</p>
+              <hr />
+                
                 <p>Fuente de sabor con estilo propio.</p>
+                </div>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
                 src={Fondo2}
-                alt="Third slide"
+                alt=""
               />
 
               <Carousel.Caption>
-              <h1>Condimentos</h1>
-                <p>Miso, amazake, salsa de soja</p>
-                <p>Tradición japonesa, elaboración propia</p>
+              <div className="carrouselText">
+              <h1>Especias</h1>
+              <hr />
+              
+                <p>Tradición japonesa, elaboración propia.</p>
+                </div>
               </Carousel.Caption>
             </Carousel.Item>
             </Carousel>

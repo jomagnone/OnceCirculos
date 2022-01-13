@@ -1,7 +1,7 @@
 import '../styles/NavBar.css';
-import { faUserCircle, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle, faShoppingCart, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import logo from '../media/logo.png';
+import logo from '../media/CirculoOnce2.png';
 
 function NavBar() {
     return (
@@ -12,7 +12,7 @@ function NavBar() {
             </div>
             <div className="menuPrincipal p2">
                 <div className="columna"><a>Nuestros <br /> Productos</a>
-                    <div className="subMenu margen"><a href="#">Sake& Mirin </a></div>
+                    <div className="subMenu margen"><a href="#">Sake & Mirin </a></div>
                     <div className="subMenu"><a href="#">Miso</a></div>
                     <div className="subMenu"><a href="#">Salsa de Soja </a></div>
                     <div className="subMenu"><a href="#">Koji & Tempeh </a></div>
@@ -27,7 +27,7 @@ function NavBar() {
             </div>
 
             <div className="menuPrincipal p3">
-                <div className="columna"><a>Circulo 11 <br /><img id = "logo" src={logo} alt = "" /></a>
+                <div className="columna"><a><img className="logo" src={logo} alt = "" /></a>
                     <div className="subMenu margen"><a href="#">Conocenos </a></div>
                     <div className="subMenu"><a href="#">Calidad de Elaboracion</a></div>
                     <div className="subMenu"><a href="#">Medios </a></div>
@@ -59,6 +59,7 @@ function NavBar() {
             <div className="menuPrincipal p5">
                     <div className="iconos"><a href="#"> <FontAwesomeIcon icon={faUserCircle} /></a></div>
                     <div className="iconos"><a href="#"><FontAwesomeIcon icon={faShoppingCart} /></a></div>
+                    <div className="iconos"><a href="#"><FontAwesomeIcon icon={faSearch} /></a></div>
                     
                     
             </div>

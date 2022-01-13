@@ -1,4 +1,4 @@
-#Carrousel{
+.Carrousel{
     width: 100%;
     height: 400px;
     position: absolute;
@@ -8,11 +8,23 @@
 }
 
 h1{
-    font-size:100px;
+    font-size:80px;
     color:#5e1113;
+    padding-top: 20px;
+    
+  
 }
 
 p {
     font-size:30px;
+    font-style: italic;
     color:#202325;
+    padding-bottom: 20px;
+    
+}
+.carrouselText {
+    background-color:rgba(245, 245, 245, 0.5) ;
+    border-radius:15px;
+    background-size: cover;  
+    
 }
