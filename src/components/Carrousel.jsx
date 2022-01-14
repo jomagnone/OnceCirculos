@@ -13,7 +13,6 @@ function Carrousel() {
 
       <div className = "Carrousel">
     
-
           <Carousel>
             <Carousel.Item>
               <img

@@ -1,0 +1,21 @@
+.container {
+    margin: 100px auto;
+    text-align: center;
+  }
+  
+  .notify-container {
+    position: relative;
+    display: inline-block;
+
+  }
+.notify-bubble {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    padding: 0px 6px 0px 5px;
+    background-color: red;
+    color: whitesmoke;
+    font-size: 0.6em;
+    border-radius: 50%;
+    display: show(400);
+  }

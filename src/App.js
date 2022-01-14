@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <header><NavBar /></header>
-      <Home />
+      <Home /> 
       <footer><Footer /></footer>
     </>
   );

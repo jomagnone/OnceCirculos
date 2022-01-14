@@ -1,12 +1,13 @@
 import 'styles/NavBar.css';
-import { faUserCircle, faShoppingCart, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import CartWidget from 'components/CartWidget';
 import logo from 'media/CirculoOnce2.png';
 
 function NavBar() {
     return (
-    <nav id ="NavBar">
-        <div id="filaNav" class="fila">
+    
+        <div  class="fila">
             <div className="menuPrincipal p1">
                 <div className="columna"><a href="#">Tienda <br /> Online</a></div>
             </div>
@@ -57,14 +58,13 @@ function NavBar() {
                 </div>
             </div>
             <div className="menuPrincipal p5">
-                    <div className="iconos"><a href="#"> <FontAwesomeIcon icon={faUserCircle} /></a></div>
-                    <div className="iconos"><a href="#"><FontAwesomeIcon icon={faShoppingCart} /></a></div>
                     <div className="iconos"><a href="#"><FontAwesomeIcon icon={faSearch} /></a></div>
-                    
+                    <div className="iconos"><a href="#"><FontAwesomeIcon icon={faUserCircle} /></a></div>
+                    <div className="iconos"><a href="#"><CartWidget /></a></div>
                     
             </div>
         </div>
-    </nav>
+    
     
     );
   }

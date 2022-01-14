@@ -1,22 +1,13 @@
 
 import Carrousel from 'components/Carrousel';
 import Products from 'components/Products';
-import Footer from 'components/Footer';
+
 
 function Home() {
     return (
       <>
-        <br></br>
-        <br></br>
-        <br></br>
-        <Carrousel />
-        <Products />
-        <Footer />
-        <br></br>
-        <br></br>
-        <br></br>
-        
-        
+        <div className="fila" ><Carrousel /></div>  
+        <div className="fila" ><Products /></div>  
 
       </>
     );
