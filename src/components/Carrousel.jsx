@@ -1,10 +1,10 @@
-import '../styles/Carrousel.css';
+import 'styles/Carrousel.css';
 import Carousel from 'react-bootstrap/Carousel';
-import Fondo1 from '../media/fondo1.jpg';
-import Fondo2 from '../media/fondo2.jpg';
-import Fondo3 from '../media/fondo3.jpg';
-import Fondo4 from '../media/fondo4.jpg';
-import Fondo5 from '../media/fondo5.jpg';
+import Fondo1 from 'media/fondo1.jpg';
+import Fondo2 from 'media/fondo2.jpg';
+import Fondo3 from 'media/fondo3.jpg';
+import Fondo4 from 'media/fondo4.jpg';
+import Fondo5 from 'media/fondo5.jpg';
 
 
 function Carrousel() {

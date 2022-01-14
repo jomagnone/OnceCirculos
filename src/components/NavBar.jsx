@@ -1,7 +1,7 @@
-import '../styles/NavBar.css';
+import 'styles/NavBar.css';
 import { faUserCircle, faShoppingCart, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import logo from '../media/CirculoOnce2.png';
+import logo from 'media/CirculoOnce2.png';
 
 function NavBar() {
     return (

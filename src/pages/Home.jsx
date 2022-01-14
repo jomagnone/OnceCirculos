@@ -1,6 +1,6 @@
 
-import Carrousel from '../components/Carrousel';
-import Products from '../components/Products';
+import Carrousel from 'components/Carrousel';
+import Products from 'components/Products';
 function Home() {
     return (
       <>
