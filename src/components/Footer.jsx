@@ -1,6 +1,6 @@
 import 'styles/Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookSquare, faInstagram, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube, faInstagram, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
 
 
 function Footer() {
@@ -27,8 +27,8 @@ function Footer() {
           <b>Email:</b> passionariaargentina@gmail.com
           <br /> <br />
           <div className="footer_iconos "><a className ="instagram" href="https://www.instagram.com/circulo_once/"><FontAwesomeIcon icon={faInstagram} /></a></div>
-          <div className="footer_iconos"><a href="#"><FontAwesomeIcon icon={faFacebookSquare } /></a></div>
-          <div className="footer_iconos"><a className ="whatsapp" href="#"><FontAwesomeIcon icon={faWhatsappSquare } /></a></div>
+          <div className="footer_iconos"><a className ="youtube" href="https://www.youtube.com/channel/UCQlMmnkJaRrQj7KrXC3uUzw"><FontAwesomeIcon icon={faYoutube } /></a></div>
+          <div className="footer_iconos"><a className ="whatsapp" href="https://api.whatsapp.com/send/?phone=5211234569568&text&app_absent=0"><FontAwesomeIcon icon={faWhatsappSquare } /></a></div>
 
       </div>
       <div className="columna footer_mapa">
