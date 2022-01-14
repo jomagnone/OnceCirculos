@@ -23,10 +23,9 @@ function Carrousel() {
               />
               <Carousel.Caption>
               <div className="carrouselText">
-                <h1>Bebidas</h1>
+                <h1 className="carrouselTitle" >Bebidas</h1>
                 <hr />
-                
-                <p>Fermentación ecosostenible para un sabor real.</p>
+                <p className="carrouselDesc">Fermentación ecosostenible para un sabor real.</p>
               </div>
               </Carousel.Caption>
             </Carousel.Item>
@@ -39,11 +38,9 @@ function Carrousel() {
 
               <Carousel.Caption>
                 <div className="carrouselText">
-                  
-              <h1>Alimentación</h1>
-              <hr />
-                
-                <p>Fuente de sabor con estilo propio.</p>
+                <h1 className="carrouselTitle" >Alimentación</h1>
+                <hr />
+                <p className="carrouselDesc">Fuente de sabor con estilo propio.</p>
                 </div>
               </Carousel.Caption>
             </Carousel.Item>
@@ -56,11 +53,10 @@ function Carrousel() {
 
               <Carousel.Caption>
               <div className="carrouselText">
-              <h1>Especias</h1>
+              <h1 className="carrouselTitle" >Especias</h1>
               <hr />
-              
-                <p>Tradición japonesa, elaboración propia.</p>
-                </div>
+              <p className="carrouselDesc">Tradición japonesa, elaboración propia.</p>
+              </div>
               </Carousel.Caption>
             </Carousel.Item>
             </Carousel>
