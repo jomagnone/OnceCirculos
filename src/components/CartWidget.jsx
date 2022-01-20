@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import 'styles/CartWidget.css';
 
 
-function CartWidget() {
+function CartWidget({qty}) {
         return (
         <div id ="cart">
                 <div class="notify-container">
-                    <span class="notify-bubble">7</span>
+                    <span class="notify-bubble">{qty}</span>
                     <FontAwesomeIcon icon={faShoppingCart} />
                 </div>
         </div>

@@ -60,7 +60,7 @@ function NavBar() {
             <div className="menuPrincipal p5">
                     <div className="iconos"><a href="#"><FontAwesomeIcon icon={faSearch} /></a></div>
                     <div className="iconos"><a href="#"><FontAwesomeIcon icon={faUserCircle} /></a></div>
-                    <div className="iconos"><a href="#"><CartWidget /></a></div>
+                    <div className="iconos"><a href="#"><CartWidget qty = {5} /></a></div>
                     
             </div>
         </div>
