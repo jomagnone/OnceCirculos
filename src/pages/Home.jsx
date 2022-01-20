@@ -1,13 +1,13 @@
 
 import Carrousel from 'components/Carrousel';
-import Products from 'components/Products';
+import Content from 'components/Content';
 
 
 function Home() {
     return (
       <>
         <div className="fila" ><Carrousel /></div>  
-        <div className="fila" ><Products /></div>  
+        <div className="fila" ><Content /></div>  
 
       </>
     );

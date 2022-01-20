@@ -1,0 +1,32 @@
+.DetailPoroductsContainter{
+    
+    padding-top:100px;
+    text-align:center;
+}
+
+
+.title {
+    text-align: left;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: normal;
+    margin-left: 5%;
+}
+
+
+.description {
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic;
+    margin: 5%;
+}
+
+.stock {
+    margin-left: 5%;
+    text-align: left;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: italic;
+
+}

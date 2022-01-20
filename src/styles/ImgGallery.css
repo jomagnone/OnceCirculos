@@ -1,0 +1,7 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.ContentGallery{
+    width: 400px;
+    margin: 5%;
+
+}

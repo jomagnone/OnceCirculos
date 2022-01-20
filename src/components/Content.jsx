@@ -1,5 +1,5 @@
 
-function Products() {
+function Contentet() {
     return (
       <>
 
@@ -22,6 +22,6 @@ function Products() {
     );
   }
   
-  export default Products;
+  export default Contentet;
 
   
