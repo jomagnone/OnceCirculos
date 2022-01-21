@@ -10,7 +10,9 @@ const data = [
                 thumbnail: require('media/products/1_1.jpg'),
             }
             ],
-        stock: 5
+        imageMin: require('media/products/1_small.jpg'),
+        stock: 2,
+        price: 150
     },
     {
         id:2,
@@ -22,7 +24,9 @@ const data = [
                 thumbnail: require('media/products/2_1.jpg'),
             }
             ],
-        stock: 5
+        imageMin: require('media/products/2_small.jpg'),
+        stock: 21,
+        price: 250
     },
 
     {
@@ -35,7 +39,10 @@ const data = [
                 thumbnail: require('media/products/3_1.jpg'),
             }
             ],
-        stock: 5
+        imageMin: require('media/products/3_small.jpg'),
+        stock: 3,
+        price: 100
+        
     },
     {
         id:4,
@@ -55,7 +62,9 @@ const data = [
                         thumbnail: require('media/products/4_3.jpg'),
                     }
                     ],
-        stock: 10
+        imageMin: require('media/products/4_small.jpg'),
+        stock: 10,
+        price: 150
     },
     {
         id:5,
@@ -67,7 +76,9 @@ const data = [
                 thumbnail: require('media/products/5_1.jpg'),
             }
             ],
-        stock: 5
+        imageMin: require('media/products/5_small.jpg'),
+        stock: 5,
+        price: 325
     },
     {
         id:6,
@@ -79,7 +90,9 @@ const data = [
                 thumbnail: require('media/products/6_1.jpg'),
             }
             ],
-        stock: 5
+        imageMin: require('media/products/6_small.jpg'),
+        stock: 7,
+        price: 120
     },
 
 

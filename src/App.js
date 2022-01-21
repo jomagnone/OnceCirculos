@@ -2,17 +2,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/index.css'
 
 import NavBar from './components/NavBar';
-import Home from './pages/Home';
 import Footer from './components/Footer';
+import Home from './pages/Home';
 import DetailProduct from './pages/DetailProduct';
+import ListProducts from './pages/ListProducts';
 
 function App() {
   return (
     <>
       <header><NavBar /></header>
       {// <Home /> 
+      //<DetailProduct />
       } 
-      <DetailProduct />
+      <ListProducts />
+
       <footer><Footer /></footer>
     </>
   );

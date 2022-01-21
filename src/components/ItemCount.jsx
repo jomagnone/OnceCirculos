@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import 'styles/ItemCount.css';
 import Button from 'react-bootstrap/Button'
 
-const ItemCount = ({stock = 10, initial = 1, onAdd}) => {
+const ItemCount = ({stock , initial , onAdd}) => {
     const [count, setCount] = useState(0);
 
     useEffect(() => {

@@ -21,7 +21,7 @@ function Product ({data})  {
                 <div className="title" >{data.title}</div>
                 <div className="description" >{data.description}</div>
                 <div className="stock" ><b>Stock: </b>{data.stock}</div>
-                <ItemCount stock = {data.Stock} initial = {1}  onAdd = {onAdd}  />
+                <ItemCount stock = {data.stock} initial = {1}  onAdd = {onAdd}  />
                 <ToastContainer />
             
             </div>  
