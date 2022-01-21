@@ -10,7 +10,6 @@ function Item(props) {
                     bg='Light'
                     border="secondary">
                 <Card.Header className="CardHeader">{props.name}</Card.Header>
-                
                 <Card.Img className="imgSmall"  src={props.img} />
                     <div className="textHidden"><FontAwesomeIcon icon={faInfoCircle} /></div>
                 <Card.Body>
