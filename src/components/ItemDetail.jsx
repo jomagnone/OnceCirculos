@@ -5,8 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-
-function Product ({data})  {
+function ItemDetail ({data})  {
 
     const onAdd = (qty) => { 
         toast.info("Agregaste " + (qty) +" "+ (data.title)+ " al carrito!");
@@ -15,7 +14,7 @@ function Product ({data})  {
     return (
         <div className="fila">
             <div className="ImgGallery columna">
-                 <ImgGallery className ="" imagesSrc = {data.imagesSrc} />
+                 <ImgGallery  imagesSrc = {data.imagesSrc} />
             </div>  
             <div className="columna" >
                 <div className="title" >{data.title}</div>
@@ -32,4 +31,4 @@ function Product ({data})  {
 
 }
 
-export default Product;
+export default ItemDetail;
