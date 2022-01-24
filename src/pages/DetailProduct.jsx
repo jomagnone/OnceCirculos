@@ -7,7 +7,7 @@ function DetailProduct() {
     return (
       <>
         <div className="DetailPoroductsContainter" >
-        <Product data = {data[6]} />
+        <Product data = {data[5]} />
         </div>
       </>
     );

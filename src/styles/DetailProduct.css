@@ -30,3 +30,16 @@
     font-style: italic;
 
 }
+
+.price {
+    margin-left: 5%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+.ImgGallery{
+    z-index: 0;
+}

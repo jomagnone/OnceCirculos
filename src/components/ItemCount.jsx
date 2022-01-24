@@ -23,14 +23,16 @@ const ItemCount = ({stock , initial , onAdd}) => {
 
     return (
         <div className="itemCount">
-            <Button variant="outline-primary" size="sm"onClick={decrement}><b>-</b></Button>
-            <Button variant="light" disabled >  {count} </Button> 
-            <Button variant="outline-primary" size="sm" onClick={increment}><b>+</b></Button>
+            <div className="itemCountControls" >
+                <Button className="itemCountButton" size="sm"onClick={decrement}><b> -</b></Button>
+                <Button className="itemCountButton" variant="light" disabled > <b> {count} </b></Button> 
+                <Button className="itemCountButton" size="sm" onClick={increment}><b> +</b></Button>
+            </div>
             <div className ="goToCard" >
                 {
                     stock 
-                    ? <Button variant="success" size="sm" onClick ={() => onAdd(count)} > agregar </Button>
-                    : <Button variant="success" size="sm" disabled> agregar</Button>
+                    ? <Button className="itemCountButtonAdd" variant="success" size="sm" onClick ={() => onAdd(count)} > Agregar </Button>
+                    : <Button className="itemCountButtonAdd" variant="success" size="sm" disabled> Agregar</Button>
                 }
             </div>
         </div>

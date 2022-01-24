@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card'
 import '../styles/Item.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInfoCircle } from '../../node_modules/@fortawesome/free-solid-svg-icons/index';
+import { faCart, faInfoCircle } from '../../node_modules/@fortawesome/free-solid-svg-icons/index';
 
 function Item(props) {
     return (

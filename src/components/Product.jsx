@@ -14,13 +14,14 @@ function Product ({data})  {
 
     return (
         <div className="fila">
-            <div className="columna">
-                 <ImgGallery imagesSrc = {data.imagesSrc} />
+            <div className="ImgGallery columna">
+                 <ImgGallery className ="" imagesSrc = {data.imagesSrc} />
             </div>  
             <div className="columna" >
                 <div className="title" >{data.title}</div>
                 <div className="description" >{data.description}</div>
                 <div className="stock" ><b>Stock: </b>{data.stock}</div>
+                <div className="price" ><br /> <b> {data.price}$ </b>Precio Unitario. <br /><br /></div>
                 <ItemCount stock = {data.stock} initial = {1}  onAdd = {onAdd}  />
                 <ToastContainer />
             

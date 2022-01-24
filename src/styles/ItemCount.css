@@ -2,4 +2,45 @@
     height:50px;
     display:inline-block;
     padding:10px;
+    border-radius: 15px;
+}
+
+
+.itemCountControls{
+    background-color:gray;
+    border-radius: 15px;
+    display:inline-block;
+
+}
+
+.itemCountButton{
+    background-color: transparent;
+    border:none;
+    color:black;
+    font-size:15px;
+    width:40px;
+
+}
+.itemCountButton:hover{
+    background-color: transparent; 
+    border:none;
+    
+}
+.itemCountButton:active{
+    background-color: transparent; 
+    border:none;
+    
+}
+.itemCountButton:focus{
+    background-color: transparent; 
+    border:none;
+    border-color:transparent;
+    box-shadow: none;
+}
+
+
+.itemCountButtonAdd{
+    border-radius: 15px;
+    width:100px;
+    height:35px;
 }

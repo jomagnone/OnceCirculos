@@ -11,10 +11,13 @@ function App() {
   return (
     <>
       <header><NavBar /></header>
-      {// <Home /> 
-      //<DetailProduct />
+      <DetailProduct />
+      {
+      // <Home /> 
+      // <DetailProduct />
+      // <ListProducts />
       } 
-      <ListProducts />
+      
 
       <footer><Footer /></footer>
     </>

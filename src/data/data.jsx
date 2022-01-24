@@ -138,6 +138,7 @@ const data = [
         stock: 7,
         price: 120
     },
+    /*
     {
         id:7,
         title:"Sake",
@@ -163,7 +164,7 @@ const data = [
         imageMin: require('media/products/7_sake/small.jpg'),
         stock: 7,
         price: 320
-    },
+    },*/
 
 
 ]
