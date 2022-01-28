@@ -3,49 +3,41 @@ import { faUserCircle, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CartWidget from 'components/CartWidget';
 import NavBarCategory from 'components/NavBarCategory';
-import NavBarCategoryFirst from 'components/NavBarCategoryFirst';
+import {Link} from 'react-router-dom'
 
 import logo from 'media/CirculoOnce2.png';
-import ourCategory from 'data/ourCategory';
-import thirdCategory from 'data/thirdCategory';
+import arrayCategory from 'data/category';
 
 function NavBar() {
     return (
     
         <div  class="fila">
             <div className="menuPrincipal p1">
-                <div className="columna"><a href="#">Tienda <br /> Online</a></div>
+            <Link to="/category/0"><div className="columna">Tienda <br /> Online</div></Link>
             </div>
             <div className="menuPrincipal p2">
                 <div className="columna"><a>Nuestros <br /> Productos</a>
                 {
-                    ourCategory.map((category,index) => (
-                        index==0
-                            ? <NavBarCategoryFirst link = "primero" category = {category} />
-                            : <NavBarCategory link = "#" category = {category} />
-                    ))
+                    arrayCategory.filter(category => (category.owner === "propio")).map((category,index) => (<NavBarCategory margen={!index} link={`./category/${category.id}`} category={category.description} key={index} /> ))
                 }
                 </div>
             </div>
             <div className="menuPrincipal p3">
-                <div className="columna"><a><img className="logo" src={logo} alt = "" /></a>
-                    <div className="subMenu margen"><a href="#">Conocenos </a></div>
-                    <div className="subMenu"><a href="#">Calidad de Elaboracion</a></div>
-                    <div className="subMenu"><a href="#">Medios </a></div>
-                    <div className="subMenu"><a href="#">Eventos </a></div>
-                    <div className="subMenu"><a href="#">Recetas </a></div>
-
+                <div className="columna"><a href="/"><img className="logo" src={logo} alt = "" /></a>
+                    {/*
+                    <div className="subMenu margen"><Link to="#">Conocenos </Link></div>
+                    <div className="subMenu"><Link to="#">Calidad de Elaboracion</Link></div>
+                    <div className="subMenu"><Link to="#">Medios </Link></div>
+                    <div className="subMenu"><Link to="#">Eventos </Link></div>
+                    <div className="subMenu"><Link to="#">Recetas </Link></div>
+                    */}
 
                 </div>
             </div>
             <div className="menuPrincipal p4">
-                <div className="columna"><a>Productos <br /> de Terceros</a>
+                <div className="columna"><a>Productos <br />de Terceros</a>
                 {
-                    thirdCategory.map((category,index) => (
-                        index==0
-                            ? <NavBarCategoryFirst link = "primero" category = {category} />
-                            : <NavBarCategory link = "#" category = {category} />
-                    ))
+                    arrayCategory.filter(category => (category.owner === "terceros")).map((category,index) => (<NavBarCategory margen={!index} link={`./category/${category.id}`} category={category.description} key={index} /> ))
                 }
                 </div>
             </div>

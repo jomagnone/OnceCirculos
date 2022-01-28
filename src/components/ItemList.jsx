@@ -1,15 +1,28 @@
 import Item from '../components/Item'
-import data from 'data/data';
+import rawData from 'data/data';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 
 function ItemList() {
+
     const [datos, setDatos] = useState([]);
+    const urlParam = useParams();
+
     useEffect(() => {
         let is_ok = true;
-        let mostrarDatos = (data) => {
-            return data;
+
+        let mostrarDatos = (data, idCat) => {
+
+            if (idCat > 0) {
+                return data.filter(item => item.idCategory === parseInt(idCat))
+            } else {
+                 return data
+            }
+
+           
         }
+          
         let consultaDatos = (time, task) => {
             return new Promise((resolve, reject) => {
                 if (is_ok) {
@@ -21,10 +34,11 @@ function ItemList() {
                 }
             });
         }
-        consultaDatos(2000, mostrarDatos(data))
+        
+        consultaDatos(1000, mostrarDatos(rawData,urlParam.idCategory ))
             .then(respuesta => setDatos(respuesta))
             .catch(err => console.log(err))
-    }, [])
+    }, )
 
         
     return (
@@ -36,6 +50,7 @@ function ItemList() {
                       stock = {producto.stock} 
                       price = {producto.price}
                       img = {producto.imageMin}
+                      idProd = {producto.id}
                       />
               </div>
             ))

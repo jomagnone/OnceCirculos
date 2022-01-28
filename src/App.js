@@ -6,20 +6,24 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import DetailProduct from './pages/DetailProduct';
 import ListProducts from './pages/ListProducts';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <header><NavBar /></header>
-      <DetailProduct />
-      {
-      // <Home /> 
-      // <DetailProduct />
-      // <ListProducts />
-      } 
       
 
-      <footer><Footer /></footer>
+      <BrowserRouter>
+        <header><NavBar /></header>
+        <Routes>
+          <Route path = "/" element = {<Home />} />
+          <Route path = "/category/:idCategory" element = {<ListProducts />} />
+          <Route path = "/product/:idProd" element = {<DetailProduct />} /> 
+        </Routes>
+        <footer><Footer /></footer>
+      </BrowserRouter>
+
+      
     </>
   );
 }

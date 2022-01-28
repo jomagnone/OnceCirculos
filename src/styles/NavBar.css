@@ -18,7 +18,7 @@
     top: 0;
     font-weight: bold;
     text-decoration:none ;
-    z-index: 1;
+    z-index: 2;
     margin-left: 0px;
     margin-right: 0px;
 
@@ -53,11 +53,13 @@
     font-size: 13px;
     text-decoration-line: none;
     text-transform: uppercase;
+    z-index: 2;
     
 }
 
 .subMenu:hover{
     font-weight: bolder;
+    z-index: 2;
 }
 
 .margen{
@@ -67,6 +69,7 @@
 
 .menuPrincipal:hover .subMenu{
     display: block;
+    z-index: 2;
 }
 
 

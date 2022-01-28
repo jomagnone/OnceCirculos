@@ -2,10 +2,14 @@
 import ItemDetail from '../components/ItemDetail';
 import data from 'data/data';
 import { useEffect, useState } from 'react';
+import { useParams} from 'react-router-dom';
 
 function DetailProduct() {
 
   const [datos, setDatos] = useState([]);
+  const urlParam = useParams();
+
+
     useEffect(() => {
         let is_ok = true;
         let mostrarDatos = (data) => {
@@ -25,12 +29,12 @@ function DetailProduct() {
         consultaDatos(2000, mostrarDatos(data))
             .then(respuesta => setDatos(respuesta))
             .catch(err => console.log(err))
-    }, [])
+    }, [data])
 
     return (
       <>
         <div className="DetailPoroductsContainter" >
-        <ItemDetail data = {data[5]} />
+        <ItemDetail data = {data.find(element => element.id === parseInt(urlParam.idProd))} />
         </div>
       </>
     );

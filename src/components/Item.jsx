@@ -2,10 +2,15 @@ import Card from 'react-bootstrap/Card'
 import '../styles/Item.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCart, faInfoCircle } from '../../node_modules/@fortawesome/free-solid-svg-icons/index';
+import { Link, useParams } from 'react-router-dom';
+
+
 
 function Item(props) {
+
     return (
         <div className="CardCointainer">
+                <Link to = {`/product/${parseInt(props.idProd)}#top `}>
                 <Card className="CardItem" 
                     bg='Light'
                     border="secondary">
@@ -20,7 +25,7 @@ function Item(props) {
                     </Card.Text>
                 </Card.Body>
                 </Card>
-                
+                </Link>
         </div>
         );
 

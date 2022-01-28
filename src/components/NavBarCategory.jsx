@@ -1,10 +1,10 @@
 
-
+import {Link} from 'react-router-dom'
 
 function NavBarCategory(props) {
     return (
         <>
-        <div className="subMenu"><a href={props.link}>{props.category}</a></div>
+        <div className={`subMenu ${ props.margen ? "margen" : ""}`}><Link to={props.link}>{props.category}</Link></div>
         </>
         );
   }

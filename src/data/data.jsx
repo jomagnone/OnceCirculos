@@ -2,6 +2,7 @@
 const data = [
     {
         id:1,
+        idCategory:7,
         title:"Umeboshi",
         description: "Ciruelas maceradas en sal. Alimento con un valor calórico moderado y escaso contenido en grasas, por lo que puede ser consumido por personas que realizan dietas para combatir el sobrepeso. Además, su alto contenido en fibra ayuda a combatir el estreñimiento y regula el tránsito intestinal ",
         imagesSrc: [
@@ -25,6 +26,7 @@ const data = [
     {
         id:2,
         title:"Furikake",
+        idCategory:8,
         description: "Condimento a base de hojas y algas desidratadas, semllas de sesamo integral. ",
         imagesSrc: [
             {
@@ -46,6 +48,7 @@ const data = [
 
     {
         id:3,
+        idCategory:8,
         title:"Teka",
         description: "Condimento a base de verudas de raiz deshidratadas -tipo zanahoria, entre otras- y miso",
         imagesSrc: [
@@ -69,6 +72,7 @@ const data = [
     },
     {
         id:4,
+        idCategory:1,
         title:"Miso",
         description: "Pasta de soja fermentada, el alimento fermentado cuyo ingrediente esencial es la soja. Se compone de soja o garbanzo hervida o cocida al vapor, que se fermentan con microorganismos de cultivo y el uso de sal. Dicha mezcla se deberá madurar durante un determinado período de tiempo hasta que la calidad del producto cumpla los requisitos estipulados. ",
         imagesSrc: [
@@ -95,6 +99,7 @@ const data = [
     },
     {
         id:5,
+        idCategory:2,
         title:"Tempeh",
         description: "El Tempe es un producto compacto, blanco, en forma de pastel, preparado a partir de soja descascarada hervida y fermentada en estado sólido con Rhizopus spp. ",
         imagesSrc: [
@@ -118,7 +123,7 @@ const data = [
     {
         id:6,
         title:"Amazake",
-        
+        idCategory:4,
         description: "Su base es el arroz que se fermenta con Aspergillus oryzae, un tipo de fermento. El producto que se obtiene tras la fermentación es algo muy dulce que puede servir como endulzante de infinidad de platos y preparados. Aporta probióticos naturales que favorecen la flora intestinal.",
         imagesSrc: [
             {
@@ -138,9 +143,9 @@ const data = [
         stock: 7,
         price: 120
     },
-    /*
     {
         id:7,
+        idCategory:20,
         title:"Sake",
         description: "Vino fermentado a partir de arroz cocido, arroz inoculado con Aspergillus oryzae y levaduras de control. Método de elaboración tradicional tipo Nigori.",
         imagesSrc: [
@@ -164,7 +169,7 @@ const data = [
         imageMin: require('media/products/7_sake/small.jpg'),
         stock: 7,
         price: 320
-    },*/
+    },
 
 
 ]
