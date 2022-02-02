@@ -1,14 +1,25 @@
 import 'styles/NavBar.css';
 import { faUserCircle, faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CartWidget from 'components/CartWidget';
 import NavBarCategory from 'components/NavBarCategory';
-import {Link} from 'react-router-dom'
-
+import {Link} from 'react-router-dom';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
 import logo from 'media/CirculoOnce2.png';
 import arrayCategory from 'data/category';
 
+
+const handlerTooltip = () => {
+
+    console.log("prueba");
+
+}
+
 function NavBar() {
+
+
+
     return (
     
         <div  class="fila">
@@ -42,7 +53,13 @@ function NavBar() {
                 </div>
             </div>
             <div className="menuPrincipal p5">
-                    <div className="iconos"><a href="#"><FontAwesomeIcon icon={faSearch} /></a></div>
+                    
+                    <div className="iconos">
+                    <Tooltip> 
+                        <a onClick={handlerTooltip} ><FontAwesomeIcon icon={faSearch} /></a>
+                    </Tooltip>
+                    </div>
+                    
                     <div className="iconos"><a href="#"><FontAwesomeIcon icon={faUserCircle} /></a></div>
                     <div className="iconos"><a href="#"><CartWidget qty = {5} /></a></div>
                     

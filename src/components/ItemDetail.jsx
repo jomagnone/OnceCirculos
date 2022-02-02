@@ -3,13 +3,24 @@ import ItemCount from 'components/ItemCount';
 import ImgGallery from 'components/ImgGallery';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Button from 'react-bootstrap/Button';
+import {useEffect, useState} from 'react';
+import { Link } from '../../node_modules/@mui/material/index';
 
 function ItemDetail ({data})  {
 
+    const [goCart, setgoCart] = useState(false);
+    useEffect(() => {
+        setgoCart(goCart);
+    },[goCart])
+
+
     const onAdd = (qty) => { 
         toast.info("Agregaste " + (qty) +" "+ (data.title)+ " al carrito!");
+        setgoCart(true);
+        console.log(goCart)
     }
+
 
     return (
         <div className="fila">
@@ -21,7 +32,12 @@ function ItemDetail ({data})  {
                 <div className="description" >{data.description}</div>
                 <div className="stock" ><b>Stock: </b>{data.stock}</div>
                 <div className="price" ><br /> <b> {data.price}$ </b>Precio Unitario. <br /><br /></div>
-                <ItemCount stock = {data.stock} initial = {1}  onAdd = {onAdd}  />
+                {
+                    goCart
+                    ? <Button href="/cart">Ir al Carrito </Button>
+                    : <ItemCount stock = {data.stock} initial = {1}  onAdd = {onAdd}  />
+                }
+                
                 <ToastContainer />
             
             </div>  
