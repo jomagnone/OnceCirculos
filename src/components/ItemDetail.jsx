@@ -4,12 +4,15 @@ import ImgGallery from 'components/ImgGallery';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Button from 'react-bootstrap/Button';
-import {useEffect, useState} from 'react';
-import { Link } from '../../node_modules/@mui/material/index';
+import {useEffect, useState,useContext} from 'react';
+
+import { CartContext } from '../context/CartContext';
 
 function ItemDetail ({data})  {
 
     const [goCart, setgoCart] = useState(false);
+    const test = useContext(CartContext);
+
     useEffect(() => {
         setgoCart(goCart);
     },[goCart])
@@ -18,7 +21,7 @@ function ItemDetail ({data})  {
     const onAdd = (qty) => { 
         toast.info("Agregaste " + (qty) +" "+ (data.title)+ " al carrito!");
         setgoCart(true);
-        console.log(goCart)
+        test.addToCart(data, qty);
     }
 
 

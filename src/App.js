@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/index.css'
-
+import CartContextProvider from "./context/CartContext";
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       
-
+      <CartContextProvider>
       <BrowserRouter>
         <header><NavBar /></header>
         <Routes>
@@ -24,7 +24,7 @@ function App() {
         </Routes>
         <footer><Footer /></footer>
       </BrowserRouter>
-
+      </CartContextProvider>
       
     </>
   );

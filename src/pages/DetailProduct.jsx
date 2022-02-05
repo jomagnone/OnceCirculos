@@ -26,7 +26,7 @@ function DetailProduct() {
                 }
             });
         }
-        consultaDatos(2000, mostrarDatos(data))
+        consultaDatos(100, mostrarDatos(data))
             .then(respuesta => setDatos(respuesta))
             .catch(err => console.log(err))
     }, [data])

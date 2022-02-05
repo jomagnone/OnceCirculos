@@ -1,0 +1,27 @@
+.cartContainer{
+    margin-top: 100px;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-self: center;
+}
+
+.cartImage{
+    border-radius: 5px;
+
+}
+.cartContainerProducts{
+    display:flex;
+    flex-direction:column;
+}
+.cartProduct{
+    margin-top:10px;
+    align-self: center;
+    font-size:20px;
+    font-weight:bold;
+}
+.cartQty{
+    align-self: center;
+}
+.ListItem{
+    justify-content: space-around !important;
+}

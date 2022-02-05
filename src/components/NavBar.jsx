@@ -61,7 +61,7 @@ function NavBar() {
                     </div>
                     
                     <div className="iconos"><a href="#"><FontAwesomeIcon icon={faUserCircle} /></a></div>
-                    <div className="iconos"><a href="#"><CartWidget qty = {5} /></a></div>
+                    <div className="iconos"><a href="./cart"><CartWidget qty = {5} /></a></div>
                     
             </div>
         </div>
