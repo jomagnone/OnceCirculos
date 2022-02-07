@@ -2,7 +2,7 @@ import Item from '../components/Item'
 import rawData from 'data/data';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
+import CircularProgress from '@mui/material/CircularProgress';
 
 function ItemList() {
 
@@ -35,7 +35,7 @@ function ItemList() {
             });
         }
         
-        consultaDatos(1000, mostrarDatos(rawData,urlParam.idCategory ))
+        consultaDatos(500, mostrarDatos(rawData,urlParam.idCategory ))
             .then(respuesta => setDatos(respuesta))
             .catch(err => console.log(err))
     }, )
@@ -44,6 +44,8 @@ function ItemList() {
     return (
         <div className="fila">
         {
+            
+            datos.length > 0 ?
             datos.map(producto => (
               <div className="columna">
                 <Item name = {producto.title} 
@@ -53,7 +55,8 @@ function ItemList() {
                       idProd = {producto.id}
                       />
               </div>
-            ))
+             
+            ) ): (<div className="progres">  <CircularProgress color="primary" /> </div>)
         }
         
         </div>

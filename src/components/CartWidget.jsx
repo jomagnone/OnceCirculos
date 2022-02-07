@@ -8,8 +8,8 @@ import 'styles/CartWidget.css';
 function CartWidget({qty}) {
         return (
         <div id ="cart">
-                <div class="notify-container">
-                    <span class="notify-bubble">{qty}</span>
+                <div className="notify-container">
+                    <span className="notify-bubble">{qty}</span>
                     <FontAwesomeIcon icon={faShoppingCart} />
                 </div>
         </div>

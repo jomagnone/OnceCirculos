@@ -3,6 +3,7 @@
     margin-left: 20%;
     margin-right: 20%;
     align-self: center;
+
 }
 
 .cartImage{
@@ -24,4 +25,34 @@
 }
 .ListItem{
     justify-content: space-around !important;
+}
+
+.cartHeader{
+    flex: 1;
+    display: flex;
+}
+
+
+.cartTitle{
+    font-size:20px;
+    font-weight:bold;
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+}
+.cartDelAll{
+    display: inline-block;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cartEmpy{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex: 1;
 }

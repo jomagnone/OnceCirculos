@@ -10,7 +10,11 @@ function ImgGallery ({imagesSrc})  {
     
         <>
            <div className="ContentGallery"> 
-                 <ImageGallery items={imagesSrc} showPlayButton={false}/>
+                 <ImageGallery 
+                        items={imagesSrc} 
+                        showPlayButton={false} 
+                        showFullscreenButton={false}
+                />
             </div>
 
         </>

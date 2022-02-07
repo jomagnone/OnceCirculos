@@ -67,3 +67,7 @@ footer .footer_iconos {
     .youtube:hover {
         color: red ;
     }
+
+    .botonLarge{
+        width:93%;
+    }

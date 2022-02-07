@@ -22,7 +22,7 @@ function NavBar() {
 
     return (
     
-        <div  class="fila">
+        <div  className="fila">
             <div className="menuPrincipal p1">
             <Link to="/category/0"><div className="columna">Tienda <br /> Online</div></Link>
             </div>
@@ -34,7 +34,7 @@ function NavBar() {
                 </div>
             </div>
             <div className="menuPrincipal p3">
-                <div className="columna"><a href="/"><img className="logo" src={logo} alt = "" /></a>
+                <div className="columna"><Link to="/"><img className="logo" src={logo} alt = "" /></Link>
                     {/*
                     <div className="subMenu margen"><Link to="#">Conocenos </Link></div>
                     <div className="subMenu"><Link to="#">Calidad de Elaboracion</Link></div>
@@ -55,13 +55,13 @@ function NavBar() {
             <div className="menuPrincipal p5">
                     
                     <div className="iconos">
-                    <Tooltip> 
+                    <Tooltip title="buscador"> 
                         <a onClick={handlerTooltip} ><FontAwesomeIcon icon={faSearch} /></a>
                     </Tooltip>
                     </div>
                     
-                    <div className="iconos"><a href="#"><FontAwesomeIcon icon={faUserCircle} /></a></div>
-                    <div className="iconos"><a href="./cart"><CartWidget qty = {5} /></a></div>
+                    <div className="iconos"><Link to="#"><FontAwesomeIcon icon={faUserCircle} /></Link></div>
+                    <div className="iconos"><Link to="./cart"><CartWidget qty = {5} /></Link></div>
                     
             </div>
         </div>
