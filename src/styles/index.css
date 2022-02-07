@@ -6,13 +6,19 @@
 a {
   color: #202325;
   text-decoration-line: none; }
+a:hover {
+    color: #202325;
+    text-decoration-line: none; }
 
 html {
-  font-family: 'Lato';
   background-color: #dfe4eb;
   color: #202325; 
 }
 
+body{
+  font-family: 'Open Sans';
+
+}
 
 
 

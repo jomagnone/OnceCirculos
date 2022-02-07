@@ -24,7 +24,7 @@ function NavBar() {
     
         <div  className="fila">
             <div className="menuPrincipal p1">
-            <Link to="/category/0"><div className="columna">Tienda <br /> Online</div></Link>
+            <div className="columna"><Link to="/category/0">Tienda <br /> Online</Link></div>
             </div>
             <div className="menuPrincipal p2">
                 <div className="columna"><a>Nuestros <br /> Productos</a>
