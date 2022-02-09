@@ -44,12 +44,14 @@ const Cart = () => {
                         
                             <div className="cartContainerProducts">
                                 <div className="cartProduct">{item.name} </div>
-                                <div className="cartQty"> <br />Cantidad: {item.qty} <br /><br /></div>
+                                <div className="cartQty"> <br />Cantidad: {item.qty} </div>
+                                <div className="cartQty"> Precio: {item.cost} $<br /><br /></div>
                                 <Button onClick={() => test.deleteItem(item.id)} color="error" variant="outlined" endIcon={<FontAwesomeIcon icon={faTrash} />}>  Delete</Button>
                             </div> 
                         </ListItem>
 
                         <Divider variant="inset" component="li" />
+                        <div className="totalPrice">Precio Total : {test.totalPrice()} $</div>
 
                         </>
                     ):(<>

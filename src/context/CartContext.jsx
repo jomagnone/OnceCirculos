@@ -22,7 +22,6 @@ const CartContextProvider = ({ children }) => {
 
             found.qty += qty;
         }
-        console.log(cartList);
 
     }
     
@@ -35,9 +34,17 @@ const CartContextProvider = ({ children }) => {
         setCartList(result);
     }
 
+    const qtyItem = () => {
+        let qtys = cartList.map(item => item.qty);
+        return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
+    }
+    const totalPrice = () => {
+        let totalPerItem = cartList.map(item => item.cost*item.qty);
+        return totalPerItem.reduce((previousValue, currentValue) => previousValue + currentValue);
+    }
 
     return (
-        <CartContext.Provider value={{cartList, addToCart, removeList, deleteItem}}>
+        <CartContext.Provider value={{cartList, addToCart, removeList, deleteItem, totalPrice,qtyItem }}>
             { children }
         </CartContext.Provider>
     );

@@ -10,14 +10,15 @@ import logo from 'media/CirculoOnce2.png';
 import arrayCategory from 'data/category';
 
 
+
+
 const handlerTooltip = () => {
-
     console.log("prueba");
-
 }
 
-function NavBar() {
 
+
+function NavBar() {
 
 
     return (
@@ -61,7 +62,7 @@ function NavBar() {
                     </div>
                     
                     <div className="iconos"><Link to="#"><FontAwesomeIcon icon={faUserCircle} /></Link></div>
-                    <div className="iconos"><Link to="./cart"><CartWidget qty = {5} /></Link></div>
+                    <div className="iconos"><Link to="./cart"><CartWidget /></Link></div>
                     
             </div>
         </div>

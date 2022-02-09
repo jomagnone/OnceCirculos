@@ -6,6 +6,7 @@
 a {
   color: #202325;
   text-decoration-line: none; }
+  
 a:hover {
     color: #202325;
     text-decoration-line: none; }
@@ -19,9 +20,10 @@ body{
   font-family: 'Open Sans';
 
 }
+header{
+  font-family: 'Open Sans';
 
-
-
+}
 
 .text {
   text-align: left;

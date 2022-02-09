@@ -56,3 +56,13 @@
     display: flex;
     flex: 1;
 }
+
+.totalPrice{
+    align-self: center;
+    display: flex;
+    flex:1;
+    justify-content: center;
+    margin: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
