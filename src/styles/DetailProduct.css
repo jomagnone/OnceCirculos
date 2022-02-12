@@ -43,3 +43,15 @@
 .ImgGallery{
     z-index: 0;
 }
+
+
+.progres{
+    margin-top:50px;
+    margin-bottom: 50px;
+    display: flex;
+}
+.progres Button{
+    align-content: center;
+}
+
+

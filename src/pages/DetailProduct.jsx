@@ -3,17 +3,12 @@ import ItemDetail from '../components/ItemDetail';
 import { useEffect, useState } from 'react';
 import { useParams} from 'react-router-dom';
 import {firestoreFetchOne} from "../utils/firestoreFetch";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const  DetailProduct = () => {
 
         const [dato, setDato] = useState();
         const {idProd} = useParams();
-        
-        let info
-        firestoreFetchOne(idProd)
-          .then(result => info = result)
-          .catch(err => console.log(err))
-
 
         useEffect(() => {
           console.log("entro");
@@ -31,9 +26,10 @@ const  DetailProduct = () => {
     return (
       <>
         <div className="DetailPoroductsContainter" >
+        {(dato) ? <ItemDetail data = {dato} />
+        : <div className="fila progres">  <CircularProgress color="primary" /> </div>
+         }
 
-        <ItemDetail data = {dato} />
-    
         </div>
       </>
     );
