@@ -1,25 +1,25 @@
 const category = [
-                {   id:20,
+                {   id:"pkFF06MA962k8jLRUQtg",
                     description:"Sake & Mirrin",
                     owner:"propio"
                 },
-                {   id:1,
+                {   id:"QnyIJzmx0CpGmRCSxlTP",
                     description:"Miso",
                     owner:"propio"
                 },
-                {   id:2,
+                {   id:"mrafGyOVFG7OK1qnqouq",
                     description:"Koji & Tempeh",
                     owner:"propio"
                 },
-                {   id:3,
+                {   id:"sJ3QAHZSapiD4F2pHD4n",
                     description:"Nato & Mochiko",
                     owner:"propio"
                 },
-                {   id:4,
+                {   id:'4d4a6OgCqu9dKn9HZTFc',
                     description:"Amasake & Hana",
                     owner:"propio"
                 },
-                {   id:5,
+                {   id:"Wwo1vJH0VpT7ossAdySt",
                     description:"Maleza de Arroz",
                     owner:"propio"
                 },
@@ -27,11 +27,11 @@ const category = [
                     description:"Vinagres",
                     owner:"propio"
                 },
-                {   id:7,
+                {   id:"tfBmiJegX1r8kwPjNpPS",
                     description:"Umeboshi & Kimchi",
                     owner:"propio"
                 },
-                {   id:8,
+                {   id:"YTZCUqBTIegpQnUuXtBQ",
                     description:"Furikate & Tekka",
                     owner:"propio"
                 },

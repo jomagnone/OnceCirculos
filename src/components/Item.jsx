@@ -8,9 +8,10 @@ import { Link } from 'react-router-dom';
 
 function Item(props) {
 
+
     return (
         <div className="CardCointainer">
-                <Link to = {`/product/${parseInt(props.idProd)}#top `}>
+                <Link to = {`/product/${props.idProd}`}>
                 <Card className="CardItem" 
                     bg='Light'
                     border="secondary">

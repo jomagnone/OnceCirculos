@@ -1,40 +1,39 @@
 
 import ItemDetail from '../components/ItemDetail';
-import data from 'data/data';
 import { useEffect, useState } from 'react';
 import { useParams} from 'react-router-dom';
+import {firestoreFetchOne} from "../utils/firestoreFetch";
 
-function DetailProduct() {
+const  DetailProduct = () => {
 
-  const [datos, setDatos] = useState([]);
-  const urlParam = useParams();
+        const [dato, setDato] = useState();
+        const {idProd} = useParams();
+        
+        let info
+        firestoreFetchOne(idProd)
+          .then(result => info = result)
+          .catch(err => console.log(err))
 
 
-    useEffect(() => {
-        let is_ok = true;
-        let mostrarDatos = (data) => {
-            return data;
-        }
-        let consultaDatos = (time, task) => {
-            return new Promise((resolve, reject) => {
-                if (is_ok) {
-                    setTimeout(() => {
-                        resolve(task)
-                    }, time);
-                } else {
-                    reject("No hay productos disponibles")
-                }
-            });
-        }
-        consultaDatos(100, mostrarDatos(data))
-            .then(respuesta => setDatos(respuesta))
-            .catch(err => console.log(err))
-    }, [data])
+        useEffect(() => {
+          console.log("entro");
+            firestoreFetchOne(idProd)
+                .then(result => setDato(result))
+                .catch(err => console.log(err))
+        }, [idProd]);
 
+        useEffect(() => {
+            return (() => {
+              setDato();
+            })
+        }, []);
+        
     return (
       <>
         <div className="DetailPoroductsContainter" >
-        <ItemDetail data = {data.find(element => element.id === parseInt(urlParam.idProd))} />
+
+        <ItemDetail data = {dato} />
+    
         </div>
       </>
     );

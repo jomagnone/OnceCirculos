@@ -7,18 +7,17 @@ import {Link} from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import logo from 'media/CirculoOnce2.png';
-import arrayCategory from 'data/category';
+import category from 'data/category';
 
 
-
-
+let arrayCategory
 const handlerTooltip = () => {
     console.log("prueba");
 }
 
-
-
 function NavBar() {
+
+    let arrayCategory = category;
 
 
     return (

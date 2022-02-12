@@ -34,8 +34,9 @@ const Cart = () => {
             <List sx={{ width: '100%', maxWidth: 800, bgcolor: 'background.paper' }}>
                
                 {
-                    test.cartList.length > 0 ? 
-                    test.cartList.map(item => 
+                    test.cartList.length > 0 
+                    ? 
+                    (test.cartList.map(item => 
                         <>
                         <ListItem style={{display:'flex', justifyContent:'space-around'}}  >
                         <ListItemAvatar>
@@ -51,10 +52,15 @@ const Cart = () => {
                         </ListItem>
 
                         <Divider variant="inset" component="li" />
+                            
                         <div className="totalPrice">Precio Total : {test.totalPrice()} $</div>
-
                         </>
-                    ):(<>
+                    )  
+                   
+                    )
+                        
+                    
+                    :(<>
                         <div className="cartEmpy">
                             <br />
                             <div>Todavia no tenes productos cargados!</div>
