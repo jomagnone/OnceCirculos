@@ -1,73 +1,100 @@
 import 'styles/NavBar.css';
-import { faUserCircle, faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CartWidget from 'components/CartWidget';
-import NavBarCategory from 'components/NavBarCategory';
-import {Link} from 'react-router-dom';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+import {Link } from 'react-router-dom';
 import logo from 'media/CirculoOnce2.png';
-import category from 'data/category';
-
-
-let arrayCategory
-const handlerTooltip = () => {
-    console.log("prueba");
-}
+import AppBar from '@mui/material/AppBar';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import { firestoreFetch } from '../utils/firestoreFetch';
+import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
+    
+    const [search, setSearch] = useState([]);
 
-    let arrayCategory = category;
+    useEffect(() => {
+        firestoreFetch()
+            .then(result => setSearch(result))
+            .catch(err => console.log(err));
+
+    }, []);
+
+
+    useEffect(() => {
+        return (() => {
+            setSearch([]);
+        })
+    }, []);
+
+    let navigate = useNavigate();   
+    function handleChange(v){
+        let id = search.find(prod => prod.title == v).id
+        console.log(id);
+        navigate('/product/'+id, { replace: true });
+
+    }
+
 
 
     return (
-    
-        <div  className="fila">
-            <div className="menuPrincipal p1">
-            <div className="columna"><Link to="/category/0">Tienda <br /> Online</Link></div>
-            </div>
-            <div className="menuPrincipal p2">
-                <div className="columna"><a>Nuestros <br /> Productos</a>
-                {
-                    arrayCategory.filter(category => (category.owner === "propio")).map((category,index) => (<NavBarCategory margen={!index} link={`./category/${category.id}`} category={category.description} key={index} /> ))
-                }
+        <AppBar position="relative">
+        <div className="Wrapper">
+            <div className="Left">
+                <div className="item">
+                    <div className="itemColumn"><Link to='/' ><img src={logo} alt="" height="40"/></Link></div>
+                    <div className="itemColumn subItem"> 
+                        <ButtonGroup color="error" variant="outlined" size="small" aria-label="small button group">
+                            <Button ><Link to="/category/0">Todo</Link></Button>
+                            <Button ><Link to="/category/SZfgU0jnlyPUW3cbCXut">Especias</Link></Button>
+                            <Button ><Link to="/category/UBFQZAWhXDgRzaILWu0a">Bebidas</Link></Button>
+                            <Button ><Link to="/category/3ja4b4Ktbxe4MCYnllzT">Comidas</Link></Button>
+                        </ButtonGroup>
+                    </div>
+                    
+                  
                 </div>
-            </div>
-            <div className="menuPrincipal p3">
-                <div className="columna"><Link to="/"><img className="logo" src={logo} alt = "" /></Link>
-                    {/*
-                    <div className="subMenu margen"><Link to="#">Conocenos </Link></div>
-                    <div className="subMenu"><Link to="#">Calidad de Elaboracion</Link></div>
-                    <div className="subMenu"><Link to="#">Medios </Link></div>
-                    <div className="subMenu"><Link to="#">Eventos </Link></div>
-                    <div className="subMenu"><Link to="#">Recetas </Link></div>
-                    */}
+                
+                <div>
 
                 </div>
             </div>
-            <div className="menuPrincipal p4">
-                <div className="columna"><a>Productos <br />de Terceros</a>
-                {
-                    arrayCategory.filter(category => (category.owner === "terceros")).map((category,index) => (<NavBarCategory margen={!index} link={`./category/${category.id}`} category={category.description} key={index} /> ))
-                }
-                </div>
-            </div>
-            <div className="menuPrincipal p5">
-                    
-                    <div className="iconos">
-                    <Tooltip title="buscador"> 
-                        <a onClick={handlerTooltip} ><FontAwesomeIcon icon={faSearch} /></a>
-                    </Tooltip>
+            <div className="Center">
+                    <div className="Search">
+                      {search.length > 0 ?
+                        <Autocomplete className="autocomplete"
+                                    freeSolo
+                                    size="small"
+                                    id="combo-box-demo"
+                                    options={search.map(item => item.title)}
+                                    sx={{ width: 300 }}
+                                    onChange={(e, value) => handleChange(value)}
+                                    renderInput={(desc) => <TextField {...desc} label="Buscar..." />}
+                                    />
+                        :
+                        <Autocomplete className="autocomplete"
+                                    freeSolo
+                                    size="small"
+                                    id="combo-box-demo"
+                                    options={["Cargando..."]}
+                                    sx={{ width: 300 }}
+                                    renderInput={(desc) => <TextField {...desc} label="Buscar..." />}
+                        />
+                      }
+                       
                     </div>
-                    
-                    <div className="iconos"><Link to="#"><FontAwesomeIcon icon={faUserCircle} /></Link></div>
-                    <div className="iconos"><Link to="./cart"><CartWidget /></Link></div>
-                    
+            </div>
+            <div className="Right">
+                <MenuItem><Link to='/cart' style={{textDecoration: "none", color: "white"}}><AccountCircleIcon /></Link></MenuItem>
+                <MenuItem><Link to='/cart' style={{textDecoration: "none", color: "white"}}><CartWidget /></Link></MenuItem>
             </div>
         </div>
-    
-    
-    );
-  }
-  
-  export default NavBar;
+    </AppBar>
+      );
+}
+
+export default NavBar;

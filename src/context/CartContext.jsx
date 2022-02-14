@@ -20,8 +20,11 @@ const CartContextProvider = ({ children }) => {
             setCartList(cartTemp);
         } else {
             found.qty += qty;
-            setCartList([... cartList]);
+            setCartList([
+                ...cartList
+            ]);
         }
+
 
     }
     

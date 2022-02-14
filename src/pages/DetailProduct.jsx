@@ -11,7 +11,7 @@ const  DetailProduct = () => {
         const {idProd} = useParams();
 
         useEffect(() => {
-          console.log("entro");
+ 
             firestoreFetchOne(idProd)
                 .then(result => setDato(result))
                 .catch(err => console.log(err))

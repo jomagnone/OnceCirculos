@@ -52,15 +52,12 @@ const Cart = () => {
                         </ListItem>
 
                         <Divider variant="inset" component="li" />
-                            
-                        <div className="totalPrice">Precio Total : {test.totalPrice()} $</div>
                         </>
-                    )  
-                   
+                        )   
                     )
                         
                     
-                    :(<>
+                    : (<>
                         <div className="cartEmpy">
                             <br />
                             <div>Todavia no tenes productos cargados!</div>
@@ -69,8 +66,14 @@ const Cart = () => {
                         </div>
                         </>
                      )
+  
                 }
-
+                {
+                test.cartList.length > 0 
+                ? <div className="totalPrice">Precio Total : {test.totalPrice()} $</div> 
+                : <></>
+                }
+                 
                     </List>
              </div>
             );

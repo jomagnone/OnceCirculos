@@ -1,0 +1,109 @@
+
+
+.menuPrincipal {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(to top, #52729f50, #52729F);
+    color:#202325;
+    width: 20%;
+    height:auto;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    font-weight: bold;
+    text-decoration:none ;
+    z-index: 2;
+    margin-left: 0px;
+    margin-right: 0px;
+
+
+    
+
+}
+.menuPrincipal:hover{
+    color:#202325;
+
+
+}
+.p1 {
+    left: 0%; }
+  
+.p2 {
+    left: 20%; }
+  
+.p3 {
+    left: 40%; }
+  
+.p4 {
+    left: 60%; }
+  
+.p5 {
+    left: 80%; }
+  
+
+.subMenu{
+    display: none;
+    margin-left: 0px;
+    margin-right: 0%;
+    width:100% ;
+    background-color:#CFD4D890  ;
+    position: relative;
+    cursor:pointer;
+    padding:15px 0px;
+    font-weight: normal;
+    font-size: 13px;
+    text-decoration-line: none;
+    text-transform: uppercase;
+    z-index: 2;
+
+
+    
+}
+
+.subMenu:hover{
+    font-weight: bolder;
+    z-index: 2;
+    color:#dfe4eb;
+
+        
+
+
+}
+
+.margen{
+    margin-top: 10px;
+    font-style: normal;
+}
+
+.menuPrincipal:hover .subMenu{
+    display: block;
+    z-index: 2;
+}
+
+
+.logo {
+    width: 110px;
+    height: auto;
+    position: block;
+    margin: 0px;
+    z-index: 1;
+}
+
+.iconos {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    display: inline-block;
+    overflow: visible; 
+    font-size: 20px;
+    text-align:center;
+  }
+  
