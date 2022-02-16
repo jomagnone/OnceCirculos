@@ -24,30 +24,48 @@ const CartContextProvider = ({ children }) => {
                 ...cartList
             ]);
         }
-
-
+        localStorage.setItem("carrito", JSON.stringify(cartList));
     }
     
     const removeList = () => {
         setCartList([]);
+        localStorage.removeItem('carrito');
     }
 
     const deleteItem = (id) => {
         let result = cartList.filter(item => item.id !== id);
         setCartList(result);
+        localStorage.setItem("carrito", JSON.stringify(cartList));
     }
 
     const qtyItem = () => {
         let qtys = cartList.map(item => item.qty);
         return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
+
     }
     const totalPrice = () => {
         let totalPerItem = cartList.map(item => item.cost*item.qty);
         return totalPerItem.reduce((previousValue, currentValue) => previousValue + currentValue);
     }
 
+    const getCart = () => {
+        let cart
+        !(JSON.parse(localStorage.getItem("carrito")))
+        ? cart = cartList
+        : cart = JSON.parse(localStorage.getItem("carrito"))
+        
+       return cart;
+        
+
+        // si hay datos en local storage 
+            // paso lo de local storage al context
+        // sino
+    }
+
+    
+
     return (
-        <CartContext.Provider value={{cartList, addToCart, removeList, deleteItem, totalPrice,qtyItem }}>
+        <CartContext.Provider value={{cartList,getCart,addToCart, removeList, deleteItem, totalPrice,qtyItem }}>
             { children }
         </CartContext.Provider>
     );

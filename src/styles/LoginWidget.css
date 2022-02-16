@@ -1,0 +1,10 @@
+
+  
+.MuiMenuItem-gutters {
+    height:50px;
+}
+
+.MuiAvatar-circular {
+    border-style:solid !important;
+    border-color:whitesmoke !important;
+}

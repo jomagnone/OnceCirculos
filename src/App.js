@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/index.css'
 import CartContextProvider from "./context/CartContext";
+import LoginContextProvider from "./context/LoginContext";
 import NavBar from './components/NavBar';
-import NavBar2 from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import DetailProduct from './pages/DetailProduct';
@@ -13,7 +13,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 function App() {
   return (
     <>
-      
+      <LoginContextProvider>
       <CartContextProvider>
       <BrowserRouter>
         <header><NavBar /></header>
@@ -26,6 +26,7 @@ function App() {
         <footer><Footer /></footer>
       </BrowserRouter>
       </CartContextProvider>
+      </LoginContextProvider>
       
     </>
   );

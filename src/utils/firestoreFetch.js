@@ -1,5 +1,4 @@
-import { query, orderBy, where, collection, getDocs } from '@firebase/firestore';
-import { doc, getDoc } from "firebase/firestore";
+import { query, orderBy, where, collection, getDocs,doc, getDoc,setDoc,updateDoc,increment } from '@firebase/firestore';
 import db from './FirebaseConfig';
 
 export const firestoreFetch = async (idCategory) => {
@@ -36,4 +35,20 @@ export const firestoreFetchOne = async (idItem) => {
     }
 
     return data;
+}
+
+
+export const firestoreInsertOrder = async (data) => {
+     
+    const newOrderRef = doc(collection(db, "orders"));
+    await setDoc(newOrderRef, data);
+    return newOrderRef;
+  }
+
+
+export const firestoreUpdateStock = async (item) => {
+    const itemRef = doc(db, "products", item.id);
+    await updateDoc(itemRef, {
+      stock: increment(-item.qty)
+        })
 }

@@ -135,3 +135,8 @@
     background-color:transparent;
     background-image: linear-gradient(to top,  #C4CFDE, #8098B9);
 }
+
+
+.cartNavBar{
+    height:52px;
+}

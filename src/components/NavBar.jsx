@@ -1,5 +1,6 @@
 import 'styles/NavBar.css';
 import CartWidget from 'components/CartWidget';
+import LoginWidget from 'components/LoginWidget';
 import {Link } from 'react-router-dom';
 import logo from 'media/CirculoOnce2.png';
 import AppBar from '@mui/material/AppBar';
@@ -7,11 +8,11 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import { firestoreFetch } from '../utils/firestoreFetch';
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
+
 
 function NavBar() {
     
@@ -89,8 +90,8 @@ function NavBar() {
                     </div>
             </div>
             <div className="Right">
-                <MenuItem><Link to='/cart' style={{textDecoration: "none", color: "white"}}><AccountCircleIcon /></Link></MenuItem>
-                <MenuItem><Link to='/cart' style={{textDecoration: "none", color: "white"}}><CartWidget /></Link></MenuItem>
+                <MenuItem><LoginWidget /></MenuItem>
+                <MenuItem className="cartNavBar"><Link to='/cart' style={{textDecoration: "none", color: "white"}}><CartWidget /></Link></MenuItem>
             </div>
         </div>
     </AppBar>
