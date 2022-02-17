@@ -29,8 +29,9 @@ const Cart = () => {
           price: item.cost,
             qty: item.qty
         }));
+
         
-        // los resto del stock
+        // los resto del stock.
         cartContext.cartList.forEach(async (item) => {
             firestoreUpdateStock(item);
         });
