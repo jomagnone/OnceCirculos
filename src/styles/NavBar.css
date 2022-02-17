@@ -17,7 +17,8 @@
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;} 
+    justify-content: space-between;
+} 
 
 .Left { 
     flex: 1;
@@ -104,30 +105,27 @@
 .itemColumn{
     display: flex;
     flex-direction: row;
+    margin-left: 10px;
 }
-.item:hover .subItem{
-  
-    display:initial;
-    z-index: 2;
 
-}
 
 .subItem{
     margin-left: 20px;
-    display: none;
     overflow: hidden;
     color:#2d3031;
     font-family:'Lato';
     font-weight: 500;
+}
+
+.dropdown-menu.show{
+    background-color:whitesmoke;
 
 }
 
-.subItem:hover {
-    border-radius: 5px;
-    border-color: whitesmoke;
- 
-    margin-top:3px;
-    
+.dropdown-toggle.nav-link{
+    color:#2d3031;
+    font-family:'Lato';
+    font-weight: 800;
 }
 
 

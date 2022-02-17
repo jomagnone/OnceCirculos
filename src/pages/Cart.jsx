@@ -7,7 +7,7 @@ import Divider from '@mui/material/Divider';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faSend } from '../../node_modules/@fortawesome/free-solid-svg-icons/index';
+import { faTrash } from '../../node_modules/@fortawesome/free-solid-svg-icons/index';
 import { CartContext } from '../context/CartContext';
 import { LoginContext } from '../context/LoginContext';
 import {Link} from 'react-router-dom';
@@ -15,10 +15,14 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SendIcon from '@mui/icons-material/Send';
 import {firestoreUpdateStock, firestoreInsertOrder} from '../utils/firestoreFetch'
 import { serverTimestamp } from "firebase/firestore";
+import ReactTooltip from 'react-tooltip';
+
+
 
 const Cart = () => {
     const cartContext = useContext(CartContext);
     const loginContext= useContext(LoginContext);
+    var order = {}
 
     const createOrder = () => {
 
@@ -45,18 +49,18 @@ const Cart = () => {
               }
         
         // armo orden
-        let order = {
+        order = {
           buyer: buyerForDB,
           total: cartContext.totalPrice(),
           items: itemsForDB,
           date: serverTimestamp()
         };
       
- 
-        // tiro modal pidiendo confirmacion
+        
+
         
         firestoreInsertOrder(order)
-            .then(result => alert('Your order has been created. Please take note of the ID of your order.\n\n\nOrder ID: ' + result.id + '\n\n'))
+            .then(result => alert('Operacion Realizada con exiton\n\nNombre: '+order.buyer.name+'\nMail: '+order.buyer.email+'\nMonto total: '+order.total+'$\nOrder ID: ' + result.id +'\n\nEn las proximas 24 hs nos pondremos en contacto' ))
             .catch(err => console.log(err));
   
         // vacio carrito
@@ -67,6 +71,7 @@ const Cart = () => {
     return (
 
         <div className="cartContainer">
+             
             <div className="cartHeader">
                 
                 <div className="cartTitle">Listado de productos</div>
@@ -85,9 +90,9 @@ const Cart = () => {
                 {
                     cartContext.getCart().length > 0 
                     ? 
-                    (cartContext.getCart().map(item => 
-                        <>
-                        <ListItem style={{display:'flex', justifyContent:'space-around'}}  >
+                    (cartContext.getCart().map((item,id) => 
+                        <div key={id}>
+                        <ListItem key= {id} style={{display:'flex', justifyContent:'space-around'}}  >
                         <ListItemAvatar>
                             <img className="cartImage" src={item.img} alt = "" />
                         </ListItemAvatar>
@@ -101,12 +106,12 @@ const Cart = () => {
                         </ListItem>
 
                         <Divider variant="inset" component="li" />
-                        </>
+                        </div>
                         )   
                     )
                         
                     
-                    : (<>
+                    : (< >
                         <div className="cartEmpy">
                             <br />
                             <div>Todavia no tenes productos cargados!</div>
@@ -121,11 +126,17 @@ const Cart = () => {
                 cartContext.getCart().length > 0 
                 ? <div className="fila">
                         <div className="totalPrice">Precio Total : {cartContext.totalPrice()} $</div> 
-                        <div className="totalPrice"> <Button onClick={createOrder} variant="contained" size="medium"  color="success" startIcon={<SendIcon  />}>Finalizar Compra</Button> </div>
+                       
+                        {!Object.keys(loginContext.login).length
+                        ?<div className="totalPrice" data-tip="Ingrese para comprar"> <Button disabled onClick={createOrder} variant="contained" size="medium"  color="success" startIcon={<SendIcon  />}>Finalizar Compra</Button>  <ReactTooltip place="bottom" type="light" effect="solid"/></div>
+                        :<div className="totalPrice" > <Button onClick={createOrder} variant="contained" size="medium"  color="success" startIcon={<SendIcon  />}>Finalizar Compra.</Button> </div>
+                        }
+                        
                    </div>
                 : <></>
                 }
                  
+
                     </List>
              </div>
             );

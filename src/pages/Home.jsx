@@ -1,6 +1,7 @@
 
 import Carrousel from 'components/Carrousel';
 import Content from 'components/Content';
+import 'styles/Home.css';
 
 
 function Home() {

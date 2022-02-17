@@ -33,7 +33,7 @@ function ItemList() {
             datos.length > 0 ?
             datos.map(producto => (
             
-              <div className="columna">
+              <div className="columna" key ={producto.id} >
                  
                 <Item name = {producto.title} 
                       stock = {producto.stock} 

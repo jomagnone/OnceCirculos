@@ -1,5 +1,5 @@
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import 'styles/CartWidget.css';
 import { LoginContext } from 'context/LoginContext';
 import { useContext } from 'react';
@@ -16,8 +16,8 @@ const LoginWidget = () => {
         const loginContext = useContext(LoginContext);
 
         const sign = () => {
-            console.log(Object.keys(loginContext.login).length)
-            loginContext.login == undefined || Object.keys(loginContext.login).length === 0
+            
+            loginContext.login === undefined || Object.keys(loginContext.login).length === 0
             ? signIn()
             : signOut()
         }
@@ -40,7 +40,7 @@ const LoginWidget = () => {
 
                 <div className = "Avatar" onClick={sign}>
                 {
-                    loginContext.login == undefined
+                    loginContext.login === undefined
                     ?<div className="Avatar" data-tip="Ingresar"><AccountCircleIcon /><ReactTooltip place="bottom" type="light" effect="solid"/></div> 
                     :<div className="Avatar" data-tip="Log In/Out"><Avatar alt={loginContext.login.displayName} src={loginContext.login.photoURL}/> <ReactTooltip place="bottom" type="light" effect="solid"/></div>
                     }

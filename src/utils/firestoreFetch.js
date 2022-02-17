@@ -2,13 +2,9 @@ import { query, orderBy, where, collection, getDocs,doc, getDoc,setDoc,updateDoc
 import db from './FirebaseConfig';
 
 export const firestoreFetch = async (idCategory) => {
-    let q;
-    if (idCategory == 0) {
-        q = query(collection(db, "products"), orderBy('title'));
-    } else if (idCategory) {
-        q = query(collection(db, "products"), where('idCategory', '==', idCategory));
-    } else {
-        q = query(collection(db, "products"), orderBy('title'));
+    let q = query(collection(db, "products"), orderBy('title'));
+    if (idCategory !== '0' &&  idCategory) {
+      q = query(collection(db, "products"), where('idCategory', '==', idCategory));
     }
     const querySnapshot = await getDocs(q);
     const dataFromFirestore = querySnapshot.docs.map(document => ({
@@ -37,6 +33,18 @@ export const firestoreFetchOne = async (idItem) => {
     return data;
 }
 
+export const firestoreFetchCategory= async (owner) => {
+
+  let q = query(collection(db, "category"), where('owner', '==', owner));
+
+  const querySnapshot = await getDocs(q);
+  const dataFromFirestore = querySnapshot.docs.map(document => ({
+      id: document.id,
+      ...document.data()
+  }));
+  return dataFromFirestore;
+
+}
 
 export const firestoreInsertOrder = async (data) => {
      

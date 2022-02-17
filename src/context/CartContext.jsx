@@ -49,18 +49,15 @@ const CartContextProvider = ({ children }) => {
     }
 
     const getCart = () => {
-        let cart
-        !(JSON.parse(localStorage.getItem("carrito")))
-        ? cart = cartList
-        : cart = JSON.parse(localStorage.getItem("carrito"))
-        
-       return cart;
-        
 
-        // si hay datos en local storage 
-            // paso lo de local storage al context
-        // sino
+        (JSON.parse(localStorage.getItem("carrito"))) && !(cartList.length)
+        ? setCartList(JSON.parse(localStorage.getItem("carrito")))
+        : <></>
+        
+       return cartList;
+        
     }
+ 
 
     
 

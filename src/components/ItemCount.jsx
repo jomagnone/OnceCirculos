@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import 'styles/ItemCount.css';
 import Button from 'react-bootstrap/Button'
+import ReactTooltip from 'react-tooltip';
 
 const ItemCount = ({stock , initial , onAdd}) => {
     const [count, setCount] = useState(0);
@@ -30,9 +31,9 @@ const ItemCount = ({stock , initial , onAdd}) => {
             </div>
             <div className ="goToCard" >
                 {
-                    stock 
+                    stock > 0
                     ? <Button className="itemCountButtonAdd" variant="success" size="sm" onClick ={() => onAdd(count)} > Agregar </Button>
-                    : <Button className="itemCountButtonAdd" variant="success" size="sm" disabled> Agregar</Button>
+                    : <div data-tip="Sin Stock"><Button  className="itemCountButtonAdd" variant="success" size="sm" disabled> Agregar</Button><ReactTooltip place="bottom" type="light" effect="solid"/></div>
                 }
             </div>
         </div>

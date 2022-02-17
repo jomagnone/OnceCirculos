@@ -7,7 +7,7 @@ import SendIcon from '@mui/icons-material/Send';
 
 function Footer() {
     return (
-      <div className="fila">
+      <div className="fila footer">
         <div className="columna">
           <form action="">
               <div className="footer_formulario">
@@ -38,7 +38,7 @@ function Footer() {
 
       </div>
       <div className="columna footer_mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.2054709251727!2d-58.44292296729118!3d-34.593768712876454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5f53df155cd%3A0xd78bf7bba3f99e0b!2sJuan%20Ram%C3%ADrez%20de%20Velasco%201087%2C%20C1414%20CABA!5e0!3m2!1ses-419!2sar!4v1642183233751!5m2!1ses-419!2sar"></iframe>
+        <iframe title ="iframeFooter"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.2054709251727!2d-58.44292296729118!3d-34.593768712876454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5f53df155cd%3A0xd78bf7bba3f99e0b!2sJuan%20Ram%C3%ADrez%20de%20Velasco%201087%2C%20C1414%20CABA!5e0!3m2!1ses-419!2sar!4v1642183233751!5m2!1ses-419!2sar"></iframe>
       </div>
     </div>
     );
