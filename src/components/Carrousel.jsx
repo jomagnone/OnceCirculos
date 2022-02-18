@@ -1,20 +1,7 @@
 import 'styles/Carrousel.css';
 import Carousel from 'react-bootstrap/Carousel';
+import dataCarrousel from '../data/carrousel'
 
-
-const data = [
-      { title:"Bebidas",
-        desc:"Fermentación ecosostenible para un sabor real.",
-        img: require('media/fondo1.jpg')
-      },
-      { title:"Alimentación",
-      desc:"Fuente de sabor con estilo propio.",
-      img: require('media/fondo2.jpg')
-      },
-      { title:"Especias",
-        desc:"Tradición japonesa, elaboración propia.",
-        img: require('media/fondo4.jpg')
-      }]
 
 function Carrousel() {
     return (
@@ -23,7 +10,7 @@ function Carrousel() {
       <div className = "Carrousel">
     
           <Carousel>
-            {data.map((item,ix) => 
+            {dataCarrousel.map((item,ix) => 
                       
                 <Carousel.Item key={ix}>
                          <img

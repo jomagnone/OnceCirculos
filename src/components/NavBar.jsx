@@ -13,7 +13,6 @@ import { useNavigate } from "react-router-dom";
 import {NavDropdown} from 'react-bootstrap'
 
 
-
 function NavBar() {
     
     const [search, setSearch] = useState([]);
