@@ -34,8 +34,18 @@ const CartContextProvider = ({ children }) => {
 
     const deleteItem = (id) => {
         let result = cartList.filter(item => item.id !== id);
+        console.log(result)
         setCartList(result);
-        localStorage.setItem("carrito", JSON.stringify(cartList));
+        if (!result.length) {
+            localStorage.removeItem("carrito");
+        } else {
+       
+            localStorage.removeItem("carrito");
+            localStorage.setItem("carrito", JSON.stringify(cartList));  
+        }
+ 
+         
+        
     }
 
     const qtyItem = () => {
@@ -53,8 +63,8 @@ const CartContextProvider = ({ children }) => {
         (JSON.parse(localStorage.getItem("carrito"))) && !(cartList.length)
         ? setCartList(JSON.parse(localStorage.getItem("carrito")))
         : <></>
-        
-       return cartList;
+
+        return cartList;
         
     }
  
